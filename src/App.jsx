@@ -11,12 +11,14 @@ document.head.appendChild(fontLink);
 // ─── DATA ────────────────────────────────────────────────────────────────────
 const NAV_LINKS = [ "Home","Portfolio","Services","About","Testimonials","Contact"];
 
+const BASE = import.meta.env.BASE_URL;
+
 const PORTFOLIO_ITEMS = [
   { id:1, category:"colourgrading-video", label:"Colour Grading", title:"Tairat — Music Video", tag:"COLOUR · FILM" },
-  { id:2, category:"before-after", label:"Before / After", title:"DV Scene — Colour Treatment", tag:"BEFORE / AFTER", before:"/DV_BEFORE.png", after:"/DV_AFTER.png" },
-  { id:3, category:"before-after", label:"Before / After", title:"Flower Scene", tag:"BEFORE / AFTER", before:"/FLOWER_BEFORE.png", after:"/FLOWER_AFTER.png" },
-  { id:4, category:"before-after", label:"Before / After", title:"Pole Scene", tag:"BEFORE / AFTER", before:"/POLE_BEFORE.png", after:"/POLE_AFTER.png" },
-  { id:5, category:"before-after", label:"Before / After", title:"Zion Scene", tag:"BEFORE / AFTER", before:"/ZION_BEFORE.png", after:"/ZION_AFTER.png" },
+  { id:2, category:"before-after", label:"Before / After", title:"DV Scene — Colour Treatment", tag:"BEFORE / AFTER", before:`${BASE}DV_BEFORE.png`, after:`${BASE}DV_AFTER.png` },
+  { id:3, category:"before-after", label:"Before / After", title:"Flower Scene", tag:"BEFORE / AFTER", before:`${BASE}FLOWER_BEFORE.png`, after:`${BASE}FLOWER_AFTER.png` },
+  { id:4, category:"before-after", label:"Before / After", title:"Pole Scene", tag:"BEFORE / AFTER", before:`${BASE}POLE_BEFORE.png`, after:`${BASE}POLE_AFTER.png` },
+  { id:5, category:"before-after", label:"Before / After", title:"Zion Scene", tag:"BEFORE / AFTER", before:`${BASE}ZION_BEFORE.png`, after:`${BASE}ZION_AFTER.png` },
   { id:6, category:"colourgrading-video", label:"Colour Grading", title:"Shoot — Street Scene", tag:"CINEMATIC · GRADE" },
 ];
 
@@ -186,7 +188,7 @@ function Hero() {
       {/* Background */}
       <div className="absolute inset-0">
         <img
-          src="/IMG-20251101-WA0003.jpg"
+          src={`${import.meta.env.BASE_URL}IMG-20251101-WA0003.jpg`}
           alt="IAMDRONES"
           className="w-full h-full object-cover opacity-40"
         />
@@ -329,7 +331,7 @@ function Portfolio() {
                 >
                   {item.id === 1 ? (
                     <video
-                      src="/TAIRAT_COLORING.mp4"
+                      src={`${import.meta.env.BASE_URL}TAIRAT_COLORING.mp4`}
                       className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                       muted
                       loop
@@ -455,7 +457,7 @@ function About() {
           className="relative"
         >
           <div className="aspect-[3/4] overflow-hidden">
-            <img src="/IMG-20251101-WA0003.jpg" alt="IAMDRONES" className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-700" />
+            <img src={`${import.meta.env.BASE_URL}IMG-20251101-WA0003.jpg`} alt="IAMDRONES" className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-700" />
           </div>
           <div className="absolute -bottom-4 -right-4 border border-[#C9A84C]/30 w-full h-full pointer-events-none" />
         </motion.div>
