@@ -9,12 +9,12 @@ fontLink.rel = "stylesheet";
 document.head.appendChild(fontLink);
 
 // ─── DATA ────────────────────────────────────────────────────────────────────
-const NAV_LINKS = ["Home","Portfolio","Services","About","Testimonials","Contact"];
+const NAV_LINKS = [ "Home","Portfolio","Services","About","Testimonials","Contact"];
 
 const PORTFOLIO_ITEMS = [
   { id:1, category:"colourgrading-video", label:"Colour Grading", title:"Tairat — Music Video", tag:"COLOUR · FILM" },
   { id:2, category:"before-after", label:"Before / After", title:"DV Scene — Colour Treatment", tag:"BEFORE / AFTER", before:"/DV_BEFORE.png", after:"/DV_AFTER.png" },
-  { id:3, category:"before-after", label:"Before / After", title:"Flower Scene", tag:"BEFORE / AFTER", before:"/FLOWER_BEFORE_.png", after:"/FLOWER_AFTER.png" },
+  { id:3, category:"before-after", label:"Before / After", title:"Flower Scene", tag:"BEFORE / AFTER", before:"/FLOWER_BEFORE.png", after:"/FLOWER_AFTER.png" },
   { id:4, category:"before-after", label:"Before / After", title:"Pole Scene", tag:"BEFORE / AFTER", before:"/POLE_BEFORE.png", after:"/POLE_AFTER.png" },
   { id:5, category:"before-after", label:"Before / After", title:"Zion Scene", tag:"BEFORE / AFTER", before:"/ZION_BEFORE.png", after:"/ZION_AFTER.png" },
   { id:6, category:"colourgrading-video", label:"Colour Grading", title:"Shoot — Street Scene", tag:"CINEMATIC · GRADE" },
